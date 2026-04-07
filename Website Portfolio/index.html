@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lancelot Sevilla | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- BG BLOBS -->
+  <div class="bg-blob blob1"></div>
+  <div class="bg-blob blob2"></div>
+  <div class="bg-blob blob3"></div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <button class="lightbox-prev" id="lightboxPrev">&#8249;</button>
+    <div class="lightbox-img-wrap">
+      <img src="" alt="" id="lightboxImg" />
+    </div>
+    <button class="lightbox-next" id="lightboxNext">&#8250;</button>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-logo"><span>LS</span> Lance</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="btn-talk" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Let's Talk</button>
+    <!-- Mobile hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile nav drawer -->
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="#home"      onclick="closeMobileNav()">Home</a></li>
+      <li><a href="#portfolio" onclick="closeMobileNav()">Portfolio</a></li>
+      <li><a href="#about"     onclick="closeMobileNav()">About</a></li>
+      <li><a href="#contact"   onclick="closeMobileNav()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-title">PORTFOLIO</div>
+    <div class="hero-img-wrap">
+      <img src="assets/me.png" alt="Lancelot Sevilla" />
+    </div>
+    <div class="hero-bottom">
+      <div class="hero-tag">Aspiring<br/>Data Analyst</div>
+      <div class="hero-name">Lancelot Sevilla</div>
+    </div>
+    <div class="scroll-indicator"><span></span></div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <p class="section-label reveal">Portfolio</p>
+    <h2 class="section-title reveal">MY PROJECTS</h2>
+    <div class="divider reveal"></div>
+    <p class="proj-category reveal">WEB / SYSTEM DESIGN</p>
+
+    <!-- DASHBOARDS -->
+    <div class="reveal"><span class="proj-tag">DASHBOARDS</span></div>
+    <div class="proj-card reveal">
+      <div class="proj-card-title">DASHBOARDS</div>
+      <div class="proj-img-wrap">
+        <img src="assets/BOOK LIST.png"          alt="Book List"         class="proj-img" data-group="dashboards"/>
+        <img src="assets/Product Management.png" alt="Product Mgmt"      class="proj-img" data-group="dashboards"/>
+        <img src="assets/Sales overview.png"     alt="Sales Overview"    class="proj-img" data-group="dashboards"/>
+        <img src="assets/uSER.png"               alt="User Dashboard"    class="proj-img" data-group="dashboards"/>
+        <img src="assets/cashier.png"               alt="User Dashboard"    class="proj-img" data-group="dashboards"/>
+        <img src="assets/add-ons.png"               alt="User Dashboard"    class="proj-img" data-group="dashboards"/>
+        <img src="assets/BOOK LIST.png"               alt="User Dashboard"    class="proj-img" data-group="dashboards"/>
+      </div>
+    </div>
+
+    <!-- LOGIN/SIGNUP -->
+    <div class="reveal"><span class="proj-tag">LOGIN / SIGNUP</span></div>
+    <div class="proj-card reveal">
+      <div class="proj-card-title">LOGIN / SIGNUP</div>
+      <div class="proj-img-wrap">
+        <img src="assets/LOGIN FORM.png" alt="Login Form"  class="proj-img" data-group="login"/>
+        <img src="assets/add acc.png"       alt="RFID Signup" class="proj-img" data-group="login"/>
+      </div>
+    </div>
+
+    <!-- MENU -->
+    <div class="reveal"><span class="proj-tag">MENU</span></div>
+    <div class="proj-card reveal">
+      <div class="proj-card-title">MENU DESIGN</div>
+      <div class="proj-img-wrap">
+        <img src="assets/Coffee Shop.png"  alt="Coffee Shop"  class="proj-img" data-group="menu"/>
+        <img src="assets/COFFEE_Drink.png" alt="Coffee Drink" class="proj-img" data-group="menu"/>
+        <img src="assets/Frappe_drink.png" alt="Frappe Drink" class="proj-img" data-group="menu"/>
+        <img src="assets/desert.png"       alt="Dessert"      class="proj-img" data-group="menu"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section-label reveal">About Me</p>
+    <h2 class="section-title reveal">WHO AM I</h2>
+    <div class="divider reveal"></div>
+    <div class="about-section">
+      <div class="about-img-wrap reveal">
+        <div class="about-img">
+          <img src="assets/aboutme.png" alt="About Lancelot"/>
+        </div>
+        <div class="cert-badge">🎓 BSIT Student<br/>4th Year</div>
+      </div>
+      <div class="about-text reveal">
+        <p>Hi, I'm <strong>Lancelot Sevilla</strong>, a 4th-year Bachelor of Science in Information Technology student with a strong passion for data analytics and technology.</p>
+        <p>I thrive on transforming raw data into meaningful insights that drive smarter decisions. My core stack includes <strong>SQL, Excel, and Power BI</strong>, which I use to analyze, visualize, and communicate data effectively.</p>
+        <p>Beyond analytics, I also have hands-on exposure in web design using <strong>Figma</strong>, and foundational experience in coding with <strong>HTML, CSS, PHP, and Flutter</strong> — giving me a well-rounded perspective across both data and development.</p>
+        <p>Currently seeking opportunities to apply my skills, grow as a data professional, and make an impact through data-driven solutions.</p>
+        <div class="skills-chips">
+          <span class="chip">SQL</span>
+          <span class="chip">Excel</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">Figma</span>
+          <span class="chip">HTML/CSS</span>
+          <span class="chip">PHP</span>
+          <span class="chip">Flutter</span>
+          <span class="chip">Data Analytics</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <p class="section-label reveal">Get In Touch</p>
+    <h2 class="section-title reveal">MY CONTACTS</h2>
+    <div class="divider reveal"></div>
+    <div class="contact-cards">
+      <a href="mailto:lancelot.sevilla77@gmail.com" class="contact-card c-email reveal">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-info">
+          <div class="contact-label">Gmail</div>
+          <div class="contact-value">lancelot.sevilla77@gmail.com</div>
+        </div>
+      </a>
+      <a href="tel:09560029348" class="contact-card c-phone reveal">
+        <div class="contact-icon">📱</div>
+        <div class="contact-info">
+          <div class="contact-label">Phone</div>
+          <div class="contact-value">09560029348</div>
+        </div>
+      </a>
+      <a href="https://www.facebook.com/lancelot.sevilla.77" target="_blank" class="contact-card c-fb reveal">
+        <div class="contact-icon">👤</div>
+        <div class="contact-info">
+          <div class="contact-label">Facebook</div>
+          <div class="contact-value">Lancelot Sevilla</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Lancelot Sevilla — Aspiring Data Analyst</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
